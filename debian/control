@@ -22,6 +22,17 @@ X-Python-Version: >= 3.6
 
 Package: com.github.tenderowl.norka
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+         libgtk-3-0,
+         libgtkspell3-3-0,
+         libgtksourceview-3.0-1,
+         libgtksourceview-3.0-common,
+         libgranite5,
+         python3 (>=3.6),
+         python-gi,
+         gir1.2-gtkspell3-3.0,
+         gir1.2-gtksource-3.0,
+         gir1.2-granite-1.0
 Description: Norka
  Continuous text editor
