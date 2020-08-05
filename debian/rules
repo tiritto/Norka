@@ -11,8 +11,17 @@ export DEB_BUILD_OPTIONS=nocheck
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+export PYTHONPATH=$(CURDIR)/debian/com.github.tenderowl.norka/usr/
+
+
 %:
 	dh $@ --buildsystem=meson
 	
-override_dh_install:
-	dh_install --fail-missing
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_auto_install:
+	dh_auto_install
+	echo "\nSTART DH INSTALL\n"
+	python3 -m pip install -U --prefix=$(PYTHONPATH) mistune==2.0.0a4 writeasapi
+	echo "\nEND DH INSTALL\n"

@@ -1,38 +1,41 @@
 Source: com.github.tenderowl.norka
-Section: x11
+Section: python
 Priority: extra
 Maintainer: Andrey Maksimov <andrey@tenderowl.com>
 Homepage: https://tenderowl.com/norka/
 Build-Depends: appstream,
                debhelper (>= 9),
-               dh-python,
+               python3 (>=3.6),
+               python3-setuptools,
+               dh-virtualenv (>= 1.0),
+               python3-pip, 
+               python3-dev,
                libgranite-dev,
                libgtk-3-dev (>= 3.10),
                intltool,
                libgtkspell3-3-dev,
                libgtksourceview-3.0-dev (>= 3.24.3),
                meson,
-               python3 (>=3.6),
                python-gi,
                gir1.2-gtkspell3-3.0,
                gir1.2-gtksource-3.0,
                gir1.2-granite-1.0
 Standards-Version: 3.9.3
-X-Python-Version: >= 3.6
+X-Python3-Version: >= 3.6
 
 Package: com.github.tenderowl.norka
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
-         libgtk-3-0,
+Pre-Depends: dpkg (>= 1.16.1), python3, python3-gi, ${misc:Pre-Depends}
+Depends: libgtk-3-0,
          libgtkspell3-3-0,
          libgtksourceview-3.0-1,
          libgtksourceview-3.0-common,
          libgranite5,
-         python3 (>=3.6),
-         python-gi,
+         python3-gi,
+         python3-requests,
          gir1.2-gtkspell3-3.0,
          gir1.2-gtksource-3.0,
-         gir1.2-granite-1.0
+         gir1.2-granite-1.0,
+         ${misc:Depends}
 Description: Norka
  Continuous text editor
