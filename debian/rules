@@ -23,5 +23,5 @@ override_dh_missing:
 override_dh_auto_install:
 	dh_auto_install
 	echo "\nSTART DH INSTALL\n"
-	python3 -m pip install -U --prefix=$(PYTHONPATH) mistune==2.0.0a4 writeasapi
+	python3 -m pip install -U --prefix=$(PYTHONPATH) mistune==2.0.0a4
 	echo "\nEND DH INSTALL\n"

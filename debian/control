@@ -32,10 +32,10 @@ Depends: libgtk-3-0,
          libgtksourceview-3.0-common,
          libgranite5,
          python3-gi,
-         python3-requests,
          gir1.2-gtkspell3-3.0,
          gir1.2-gtksource-3.0,
          gir1.2-granite-1.0,
          ${misc:Depends}
+Recommends: python3-requests
 Description: Norka
  Continuous text editor
