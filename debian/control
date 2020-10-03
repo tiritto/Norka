@@ -15,6 +15,7 @@ Build-Depends: appstream,
                intltool,
                libgtkspell3-3-dev,
                libgtksourceview-3.0-dev (>= 3.24.3),
+               libwebkit2gtk-4.0-dev,
                meson,
                python-gi,
                gir1.2-gtkspell3-3.0,
@@ -35,6 +36,7 @@ Depends: libgtk-3-0,
          gir1.2-gtkspell3-3.0,
          gir1.2-gtksource-3.0,
          gir1.2-granite-1.0,
+         gir1.2-webkit2-4.0,
          ${misc:Depends}
 Recommends: python3-requests
 Description: Norka
